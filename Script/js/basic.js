@@ -95,6 +95,87 @@ let arr = [1, 2, 3, 4];
     let search2 = "stan";
     let instanceSubString = instanceOfString.includes(search1);
     console.log(instanceOfString.indexOf(search2));
+
+    console.log(instanceOfString.substring(4, 9));//absolute index
+    console.log(instanceOfString.substring(4, 4));//relative index
+    
+    console.log(search1.repeat(4));//Repeats
 }
 
-//20247
+//functioins
+{
+    let position = {
+        x:10,
+        y:20
+        ,
+        print: function(){
+            console.log(`X: ${this.x}, Y: ${this.y}`);
+        }
+    }
+
+}
+
+//if https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
+{
+    var nam = prompt();
+    if(nam === "Test")
+    {
+        console.log("Tested!");
+    }
+    else
+    {
+        console.log("Irish wristwatch");
+    }
+
+    nam === test? console.log("Tested!") : console.log("Irish wristwatch");
+    var stiring = nam === test? "Tested!" : "Irish wristwatch";
+}
+
+//switch
+{
+    let prom = "";
+    switch(prom)
+    {
+        case "I":
+            ;
+            break;
+            default:
+                ;
+                break;
+
+    }
+}
+
+//loop
+
+{
+    let i = 0;
+    while(i < 10)
+    {
+        ;//code
+        i++;
+    }
+
+    let password;
+    do{
+        password = prompt("passcode?");
+
+    }while(password.toLowerCase() !== "let me in");
+
+    let i = 0;
+    while(i < 10)
+    {
+        break;
+        i++;
+    }
+
+    let i = 0;
+    while(i < 10)
+    {
+        continue;
+        i++;
+    }
+}
+
+
+//31955
