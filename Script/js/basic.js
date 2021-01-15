@@ -177,5 +177,20 @@ let arr = [1, 2, 3, 4];
     }
 }
 
+//array
+{
+    let arrr = [1,2, 34, 5, "a", {}, function(){console.log("hello")}];
+    arrr[6];
 
-//31955
+    arrr.unshift(40);
+    arrr.shift(10);
+
+    let tosort = [1, 6, 3, 7 ,4 ,65, 2,23 , 5,47,1, 8, 9, 45, 7, 2, 5, 78, 9,0 ,12, 34];
+
+    tosort.sort();
+    tosort.sort(function(a, b){return a-b});
+    tosort.reverse();
+}
+
+
+//40718
