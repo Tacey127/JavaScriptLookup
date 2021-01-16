@@ -190,7 +190,30 @@ let arr = [1, 2, 3, 4];
     tosort.sort();
     tosort.sort(function(a, b){return a-b});
     tosort.reverse();
+
+    let tomerge = [1,2  ,3];
+    tosort.concat(tosort);
+
+    tosort.forEach(function(element)
+    {
+        console.log(element);
+    });
+
+    //multi
+
+    let multiarr = [1, 2, 3][2, 3, 4][3, 4, 5];
+
+    multiarr.forEach(
+        function(row)
+        {
+            row.forEach(function(col)
+            {
+                console.log(col);
+            }
+            );
+        }
+    );
 }
 
 
-//40718
+//42903
