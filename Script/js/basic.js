@@ -238,4 +238,4 @@ let arr = [1, 2, 3, 4];
     let aDate = Date.parse('12 January 1995');//doesnt work on all browsers?
 }
 
-//52908
+//60352
