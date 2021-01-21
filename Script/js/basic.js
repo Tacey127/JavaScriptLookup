@@ -187,8 +187,8 @@ let arr = [1, 2, 3, 4];
 
     let tosort = [1, 6, 3, 7 ,4 ,65, 2,23 , 5,47,1, 8, 9, 45, 7, 2, 5, 78, 9,0 ,12, 34];
 
-    tosort.sort();
-    tosort.sort(function(a, b){return a-b});
+    tosort.sort();// 1,11, 2, 3, 4, 5
+    tosort.sort(function(a, b){return a-b});//1, 2, 3, 4, 5, 11
     tosort.reverse();
 
     let tomerge = [1,2  ,3];
@@ -215,5 +215,27 @@ let arr = [1, 2, 3, 4];
     );
 }
 
+{
+    outerloop: for(let i = 0; i < 12; i++)
+    {
+        for(let j = 0; j < 12; j++)
+        {
+            break;//skips loop
+            continue;//skips loop content
 
-//42903
+            break outerloop;//skips outer loop
+            continue outerloop;//skips outer loop content
+        }
+    }
+}
+
+//dates https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+{
+    let myDate = new Date(2020, 11, 10);
+    console.log(myDate);
+
+
+    let aDate = Date.parse('12 January 1995');//doesnt work on all browsers?
+}
+
+//52908
