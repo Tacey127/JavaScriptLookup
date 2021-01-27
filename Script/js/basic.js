@@ -228,14 +228,6 @@ let arr = [1, 2, 3, 4];
         }
     }
 }
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
-//dates https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-{
-    let myDate = new Date(2020, 11, 10);
-    console.log(myDate);
-
-
-    let aDate = Date.parse('12 January 1995');//doesnt work on all browsers?
-}
-
-//60352
+//64720
