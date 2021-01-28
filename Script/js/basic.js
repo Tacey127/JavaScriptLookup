@@ -228,6 +228,19 @@ let arr = [1, 2, 3, 4];
         }
     }
 }
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
-//64720
+//ctor
+{
+    function User(nme = "alt"){
+        console.log(this);
+        this.nm = nme;
+        console.log(this);
+    }
+
+    let me = new User("test");
+    console.log();
+}
+
+
+
+//70327

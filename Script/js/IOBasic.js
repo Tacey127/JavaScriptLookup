@@ -17,7 +17,7 @@ console.log(username);//better
 }
 
 
-{
+{//exeption handling
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 
 
@@ -25,13 +25,15 @@ console.log(username);//better
     {
         doesntexist;
     }
-    catch
+    catch(e)
     {
-
+        //does on fail
+        console.log(e);//e shows error of exeption
     }
     finally
     {
-
+        //does no mater what
+        console.log(test);
     }
 
 }
