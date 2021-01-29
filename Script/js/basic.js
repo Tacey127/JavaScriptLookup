@@ -239,8 +239,61 @@ let arr = [1, 2, 3, 4];
 
     let me = new User("test");
     console.log();
+
+    function factoryFunction(alt)
+    {
+        let ff = {
+            name: alt
+        };
+
+        return ff;
+    }
+
+    User.prototype.greet = function()
+    {
+        console.log("s");
+    };
+
+
+    
+    let allt = factoryFunction("ss");
+
 }
 
+{
+    let user ={
+        active: true,
+        sayhello:function()
+        {
+            return this.name;
+        }
+    };
 
+    let student = {
+        name: "def",
+        lesson: "english"
+    }
 
-//70327
+    let teacher = {
+        name: "abc",
+        teaching: ["math", "science"]
+    };
+
+    Object.setPrototypeOf(student, user);
+    Object.setPrototypeOf(teacher, user);
+
+    
+    console.log(teacher.active);
+    console.log(student.active);
+
+    student.active = false;
+
+    console.log(teacher.active);
+    console.log(student.active);
+
+    console.log(teacher.sayhello());
+    console.log(student.sayhello());
+
+}
+
+//72932
