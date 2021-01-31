@@ -260,7 +260,7 @@ let arr = [1, 2, 3, 4];
 
 }
 
-{
+{//polymorphism
     let user ={
         active: true,
         sayhello:function()
@@ -296,4 +296,63 @@ let arr = [1, 2, 3, 4];
 
 }
 
-//72932
+{//polymorphism 2
+    let user ={
+        active: true,
+        sayhello:function()
+        {
+            return this.name;
+        }
+    };
+
+    let student = {
+        name: "def",
+        lesson: "english"
+    }
+
+    let teacher = {
+        name: "abc",
+        teaching: ["math", "science"],
+        sayhello:function()
+        {
+            return "you know what it is";
+        }
+    };
+
+    Object.setPrototypeOf(student, user);
+    Object.setPrototypeOf(teacher, user);
+
+    student.active = false;
+
+    let  newMembers = [teacher, student];
+
+
+    newMembers.forEach(function (e) {
+       console.log(e.sayhello());
+    });
+
+
+    //check for property
+    console.log("name in teacher? ", "name" in teacher);
+
+    
+    //check for property
+    console.log("name in teacher? ", teacher.hasOwnProperty("name"));
+    console.log("name in teacher? ", teacher.hasOwnProperty("active"));
+
+    
+
+}
+
+function  Taco(params) {
+    this.toppings = ["cheese"];
+}
+
+Taco.prototype.make = function()
+{
+    console.log("making a taco...");
+};
+
+let myTaco = new Taco();
+
+//74220
