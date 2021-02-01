@@ -297,6 +297,34 @@ let arr = [1, 2, 3, 4];
 }
 
 {//polymorphism 2
+
+    function User(){
+        this.active = false;
+    }
+
+    User.prototype.sayhello = function (params) {
+        return this.name;
+    };
+
+    function Student( nam) {
+        this.name = nam;
+    };
+    Student.prototype = new User();
+
+
+    function Teacher() {
+        this.name = "t";
+    };
+    Teacher.prototype = new User();
+    Teacher.prototype.sayhello = function () {
+        return "teach";
+    };
+
+    let student = new Student("s");
+    console.log(student instanceof Student);
+    console.log(student instanceof User);
+
+/*
     let user ={
         active: true,
         sayhello:function()
@@ -340,7 +368,17 @@ let arr = [1, 2, 3, 4];
     console.log("name in teacher? ", teacher.hasOwnProperty("name"));
     console.log("name in teacher? ", teacher.hasOwnProperty("active"));
 
-    
+    //get array of properties
+    let properties = [];
+    for(let prop in teacher)
+    {
+        if(teacher.hasOwnProperty(prop))//get non inherited properties
+        {
+            properties.push(prop);
+        }
+    }
+*/
+
 
 }
 
@@ -355,4 +393,4 @@ Taco.prototype.make = function()
 
 let myTaco = new Taco();
 
-//74220
+//80351
