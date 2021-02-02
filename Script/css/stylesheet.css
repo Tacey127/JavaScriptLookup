@@ -1,0 +1,11 @@
+button{
+    background-color: wheat;
+}
+
+.border{
+    border: 5px orange solid;
+}
+
+*{
+    background-color: red;
+}
