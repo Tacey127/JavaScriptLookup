@@ -382,15 +382,15 @@ let arr = [1, 2, 3, 4];
 
 }
 
-function  Taco(params) {
-    this.toppings = ["cheese"];
-}
 
-Taco.prototype.make = function()
-{
-    console.log("making a taco...");
-};
+    function  Taco(params) {
+        this.toppings = ["cheese"];
+    }
+    
+    Taco.prototype.make = function()
+    {
+        console.log("making a taco...");
+    };
+    
+    let myTaco = new Taco();
 
-let myTaco = new Taco();
-
-//84151

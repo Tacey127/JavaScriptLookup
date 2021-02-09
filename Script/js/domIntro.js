@@ -34,7 +34,7 @@
     }
 }
 
-
+//node editing
 {
     //grab all paragraphs
     let paragraphs = document.getElementsByTagName("p");//[0];
@@ -67,3 +67,26 @@
 
 }
 
+//attributes
+{
+    document.getElementById("input").value = "!!!!!";
+    document.getElementById("input").hasAttribute("tacos");
+    document.getElementById("input").getAttribute("tacos");
+}
+
+//
+{
+    let button = document.getElementById("clickme");
+
+    button.onclick = function () {
+        let node =  document.createElement('li');
+        console.log(node);
+
+        //node.appendChild(document.createTextNode("new"));
+        node.appendChild(document.getElementById("input").value);
+
+        let alist = document.getElementById("items");
+
+        list.appendChild(node);
+    }
+}
