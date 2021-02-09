@@ -36,7 +36,34 @@
 
 
 {
+    //grab all paragraphs
     let paragraphs = document.getElementsByTagName("p");//[0];
     console.log(paragraphs);
+
+    //strong element
+    console.log(paragraphs[0].childNodes[0]);
+    
+    //innerhtml, nodevalue, textContent, innertext
+    paragraphs[0].childNodes[0].childNodes[0].nodeValue = "llamas";
+
+
+    let alist = document.getElementsByTagName("ol");
+    console.log(alist);
+    let ourList = alist[0];
+
+    ourList.onmouseover = function () {
+        console.log("mouseOver");
+        ourList.childNodes[1].childNodes[0].nodeValue = "House";
+        document.getElementById("special").innerHTML = "House";
+    }
+
+    let button = document.getElementById("clickme");
+    button.onmouseenter = function () {
+        button.innerHTML = "revealed";
+    }
+    button.onmouseleave = function () {
+        button.innerHTML = "hoveroverme";
+    }
+
 }
 
